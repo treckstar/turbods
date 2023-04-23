@@ -1,5 +1,11 @@
 # @turbods/core
 
+## 0.1.1
+
+### Patch Changes
+
+- Changeset generated changelogs and aicommits generated commit messages.
+
 ## 0.1.0
 
 ### Minor Changes
