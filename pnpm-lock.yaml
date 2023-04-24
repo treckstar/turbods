@@ -30,7 +30,7 @@ importers:
       '@storybook/builder-webpack5': ^6.5.13
       '@storybook/manager-webpack5': ^6.5.13
       '@storybook/react': ^6.5.13
-      '@turbods/core': workspace:0.1.1
+      '@turbods/core': workspace:0.1.2
       '@types/react': ^18.0.25
       autoprefixer: ^10.4.13
       babel-loader: ^8.3.0
@@ -3079,7 +3079,7 @@ packages:
       glob: 7.2.3
       handlebars: 4.7.7
       interpret: 2.2.0
-      json5: 2.2.1
+      json5: 2.2.3
       lazy-universal-dotenv: 3.0.1
       picomatch: 2.3.1
       pkg-dir: 5.0.0
