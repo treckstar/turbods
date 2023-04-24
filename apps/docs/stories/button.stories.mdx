@@ -1,7 +1,41 @@
 import { Button } from "@turbods/core/src";
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
-<Meta title="Components/Button" component={Button} />
+export const Template = (args) => <Button {...args}>Button</Button>;
+
+<Meta 
+  title="Components/Button" 
+  component={Button} 
+  argTypes={{
+    size: {
+      control: {
+        type: 'select',
+        options: ['sm', 'md', 'lg'],
+      },
+    },
+    color: {
+      control: {
+        type: 'select',
+        options: ['white', 'black', 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+      },
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['solid', 'outline', 'ghost', 'link'],
+      },
+    },
+    isLoading: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    }
+  }} />
 
 # Button
 
@@ -14,7 +48,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
 ## Examples
 
 <Canvas>
-  <Story name="Default">
-    <Button>Hello</Button>
-  </Story>
+  <Story
+  name="Default"
+  argTypes={{
+    size: {
+      control: {
+        type: 'select',
+        options: ['sm'],
+      },
+    },
+    color: {
+      control: {
+        type: 'select',
+        options: ['white', 'black'],
+      },
+    },
+    isLoading: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    }
+  }}>
+  {Template.bind({})}
+</Story>
+  <Story
+  name="Is Disabled"
+  args={{
+    disabled: true,
+  }}>
+  {Template.bind({})}
+</Story> 
 </Canvas>
